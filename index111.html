@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+
+    <style>
+      body {
+        background-color: black;
+      }
+      .sun {
+        background: linear-gradient(white, orange, red);
+        width: 50px;
+        height: 50px;
+        transition: all 2s;
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(2px);
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="sun"></div>
+
+    <script>
+      let body = document.body;
+
+      window.addEventListener("mousemove", (e) => {
+        const { clientX: x, clientY: y } = e;
+
+        let sun = document.querySelector(".sun");
+
+        sun.style.transform = `translate(${x}px,${y}px)`;
+      });
+    </script>
+  </body>
+</html>
