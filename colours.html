@@ -6,13 +6,15 @@
     <title>Document</title>
     <style>
       body {
-        transition: all 0.8ms;
+        transition: all 99ms;
       }
     </style>
   </head>
   <body>
+    <h1></h1>
     <script>
       const body = document.querySelector("body");
+      const heading = document.querySelector("h1");
       const colours = ["A", "B", "C", "D", "E", "F", 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
       const generateRandomNum = () => {
@@ -28,6 +30,7 @@
           hex += colours[generateRandomNum()];
         }
         body.style.backgroundColor = hex;
+        heading.innerHTML = hex;
       });
     </script>
   </body>
