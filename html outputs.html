@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="outputHeading">Javascript Html output heading</h1>
+    <p id="outputParagraph">This is where Javascript output will go.</p>
+
+    <button onclick="changeContent()">click here</button>
+
+    <script>
+      // we can select a particular element in html by getElementById method
+
+      function changeContent() {
+        //get elements by their ids and storing them in variables
+
+        var headingElement = document.getElementById("outputHeading");
+        var paragraphElement = document.getElementById("outputParagraph");
+
+        //change content on click
+
+        headingElement.innerHTML = "This Heading is created using JS";
+        paragraphElement.innerHTML =
+          "This Paragraph is created using JavaScript";
+      }
+    </script>
+  </body>
+</html>
